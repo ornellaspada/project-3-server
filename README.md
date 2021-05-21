@@ -3,3 +3,6 @@ avocado
 tomatoes
 else
 orange juices
+cherries
+strawberries
+peaches
