@@ -1,5 +1,6 @@
-### shoppinng List
-avocado
-tomatoes
-else
-orange juices
+### This is a Amazon list
+vitamins
+screwdriver
+table
+chairs 
+new computer
