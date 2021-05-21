@@ -1,5 +1,5 @@
 ### shoppinng List
-avocado
-tomatoes
+star wars
+jedi
 else
 orange juices
