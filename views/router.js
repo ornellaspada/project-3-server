@@ -9,6 +9,6 @@ const router = express.Router()
 
 router.route('/places')
   .get(placesController.index)
-  .post(placesController.create)
+  // .post(placesController.create)
 
 export default router

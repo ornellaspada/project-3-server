@@ -1,4 +1,4 @@
-import mongoose, { connect } from 'mongoose'
+import mongoose from 'mongoose'
 import connectToDb from './connectToDb.js'
 
 // ? import models and data
