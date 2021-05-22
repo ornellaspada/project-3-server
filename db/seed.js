@@ -3,10 +3,10 @@ import connectToDb from './connectToDb.js'
 
 // ? import models and data
 import placesData from '../db/data/places.js'
-import PlaceModel from '../models/placesModel.js'
+import PlaceModel from '../models/placeModel.js'
 
 import usersData from '../db/data/user.js'
-import UserModel from '../models/placesModel.js'
+import UserModel from '../models/userModel.js'
 
 async function seedDataBase() {
   try {
@@ -24,13 +24,14 @@ async function seedDataBase() {
     console.log(users)
 
     // ? Assign a user to each place..
-    // const placesDataWithUsers = placesData.map(place => {
-    //   return { ...place, user: user[0]._id }
-    // })
+    const placesDataWithUsers = placesData.map(place => {
+      return { ...place, user: users[0]._id }
+    })
 
     // ? seed my db with mongoose
-    const place = await PlaceModel.create(placesData)
-    console.log(`🤖  ${place.length} places created`)
+    const places = await PlaceModel.create(placesDataWithUsers)
+    console.log(`🤖  ${places.length} places created`)
+    console.log(places)
 
 
 

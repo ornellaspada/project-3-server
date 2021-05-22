@@ -29,4 +29,4 @@ const placeSchema = new mongoose.Schema({
 //   reviews: [reviewSchema],
 })
 
-export default mongoose.model('Place' , placeSchema)
+export default mongoose.model('PlaceModel' , placeSchema)
