@@ -2,7 +2,7 @@ export default [
   {
     name: 'London',
     description: 'a very dangerous place',
-    area: 'shepard\'s bush',
+    area: 'shepard bush',
     address: '..',
     postcode: 'stop asking questions',
     lat: 2,

@@ -13,6 +13,6 @@ const userSchema = new mongoose.Schema({
 
 userSchema.plugin(uniqueValidator)
 
-userSchema.plugin(mongooseHidden({ defualtHidden: { password: true, _id: true } }))
+userSchema.plugin(mongooseHidden({ defaultHidden: { password: true, _id: true } }))
 
 export default mongoose.model('User', userSchema)

@@ -5,7 +5,7 @@ import connectToDb from './connectToDb.js'
 import placesData from '../db/data/places.js'
 import PlaceModel from '../models/placesModel.js'
 
-import userData from '../db/data/user.js'
+import usersData from '../db/data/user.js'
 import UserModel from '../models/placesModel.js'
 
 async function seedDataBase() {
@@ -19,13 +19,20 @@ async function seedDataBase() {
     console.log('🤖 All places Removed')
     
     // ? create user
-    const user = await UserModel.create(userData)
-    console.log(`🤖 ${user.length} users created`)
-    console.log(user)
+    const users = await UserModel.create(usersData)
+    console.log(`🤖 ${users.length} users created`)
+    console.log(users)
+
+    // ? Assign a user to each place..
+    // const placesDataWithUsers = placesData.map(place => {
+    //   return { ...place, user: user[0]._id }
+    // })
 
     // ? seed my db with mongoose
     const place = await PlaceModel.create(placesData)
     console.log(`🤖  ${place.length} places created`)
+
+
 
     // ? disconnect once we have finished 
     await mongoose.connection.close()
