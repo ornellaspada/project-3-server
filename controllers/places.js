@@ -47,12 +47,19 @@ async function show(req, res, next) {
   }
 }
 
-async function create(req, res, next){
+// ? CREATE a place
+async function create(req, res, next) {
   req.body.user = req.currentUser
   try {
     const newPlace = await PlaceModel.create(req.body)
+    console.log(newPlace)
     res.status(201).json(newPlace)
-// ? function for removing
+  } catch (e) {
+    next(e)
+  }
+}
+
+// ? DELETE a place
 async function remove(req, res, next) {
   try {
     // ? get user id
@@ -77,28 +84,30 @@ async function remove(req, res, next) {
   }
 }
 
+// ? UPDATE a place
 async function update(req, res, next) {
   try { 
+    console.log('working!')
     const placeId = req.params.placeId
+    console.log(placeId)
     const body = req.body
+    console.log(body)
 
-    const updatePlace = await PlaceModel.findByIdAndUpdate(placeId, body, { new: true })
-    console.log(updatePlace)
+    const updatedPlace = await PlaceModel.findOneAndUpdate({ _id: placeId }, body, { new: true })
+    console.log(updatedPlace)
 
-    updatePlace.save() 
-    
-    res.status(202).json(updatePlace)
+    res.status(202).json(updatedPlace)
     
   } catch (e) {
     next(e)
   }
 }
 
-
 export default {
-  index,
-  show,
+  index, 
+  search, 
+  show, 
+  create,
   remove,
   update,
-  search,
 }

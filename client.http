@@ -1,4 +1,4 @@
-@placeId = 60a95e969d05563081a3b67c
+@placeId = 60aa66d3aebdfe2b77fe2b80
 
 ###
 
@@ -6,9 +6,18 @@
 GET http://localhost:4000/api/places
 
 ###
+
+# Search a place
+GET http://localhost:4000/api/places/search?name=London
+
+###
+
+# Get ONE place
 GET http://localhost:4000/api/places/{{placeId}}
 
 ###
+
+# Create a place
 POST http://localhost:4000/api/places
 # Authorization: Bearer
 content-type: application/json
@@ -18,7 +27,7 @@ content-type: application/json
   "description": " It's a cool place",
   "area": "Shoreditch",
   "address": "Brick Lane",
- "postcode": "E1 6QL",
+  "postcode": "E1 6QL",
   "lat": 123,
   "long": 321,
   "categories": [
@@ -28,7 +37,9 @@ content-type: application/json
 }
 
 ###
-PUT http://localhost:4000/api/places/60aa588cb8353a1bd4e6203d
+
+# Update a place
+PUT http://localhost:4000/api/places/{{placeId}}
 Content-Type: application/json
 
 [
@@ -46,23 +57,17 @@ Content-Type: application/json
   }
 ]
 
-# Search a place
-GET http://localhost:4000/api/places/search?name=London
-
 ###
 
-# Get ONE place
-GET http://localhost:4000/api/places/{{placeId}}
-
-###
+# USERS 
 
 POST http://localhost:4000/api/register
 content-type: application/json
 
 {
-  "username": "lari1",
-  "password": "lari1",
-  "email":"lari1@lari16"
+  "username": "lari2",
+  "password": "lari2",
+  "email":"lari2@lari16"
   }
 
 ###
