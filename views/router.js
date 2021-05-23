@@ -1,7 +1,6 @@
 // ? setting our routes up
 
 import express from 'express'
-
 import placesController from '../controllers/places.js'
 
 
@@ -13,6 +12,8 @@ router.route('/places')
 
 router.route('/places/:placeId')
   .get(placesController.show)
+  .delete(placesController.remove)
+  .put(placesController.update)
 
 
 export default router

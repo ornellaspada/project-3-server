@@ -6,3 +6,22 @@ GET http://localhost:4000/api/places
 
 ###
 GET http://localhost:4000/api/places/{{placeId}}
+
+###
+PUT http://localhost:4000/api/places/60aa588cb8353a1bd4e6203d
+Content-Type: application/json
+
+[
+  {
+    "categories": [],
+    "name": "London1",
+    "description": "a very dangerous place",
+    "area": "shepard bush",
+    "address": ".....",
+    "postcode": "stop asking questions",
+    "lat": 2,
+    "long": 2,
+    "rating": 5,
+    "__v": 0
+  }
+]
