@@ -6,3 +6,30 @@ GET http://localhost:4000/api/places
 
 ###
 GET http://localhost:4000/api/places/{{placeId}}
+
+
+###
+
+
+GET http://localhost:4000/api/places/60aa539a58426316adf04fed
+
+###
+
+POST http://localhost:4000/api/register
+content-type: application/json
+
+{
+   "username": "lari1",
+   "password": "lari1",
+   "email":"lari1@lari16"
+  }
+
+###
+
+  POST http://localhost:4000/api/login
+content-type: application/json
+
+{
+   "email":"lari1@lari16",
+   "password": "lari16"
+  }
