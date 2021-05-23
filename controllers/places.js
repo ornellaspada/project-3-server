@@ -12,10 +12,28 @@ async function index(req, res, next) {
   }
 }
 
+
+// ? function SEARCH 
+async function search(req, res, next) {
+  try {
+    console.log('working')
+    const searchParams = req.query
+    console.log(searchParams)
+
+    // ? To match exact values. (can add more logic here to match substrings)
+    const placesList = await PlaceModel.find(searchParams).populate('user')
+
+    res.status(200).json(placesList)
+  } catch (e) {
+    next(e)
+  }
+}
+
+
 // ? function to GET only one place
 async function show(req, res, next) {
   try {
-    const placeId = req.params.id
+    const placeId = req.params.placeId
     const place = await PlaceModel.findById(placeId).populate('user')
     console.log(place)
     
@@ -29,7 +47,11 @@ async function show(req, res, next) {
   }
 }
 
+
+
+
 export default {
   index,
   show,
+  search,
 }

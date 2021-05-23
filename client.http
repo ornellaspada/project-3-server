@@ -2,7 +2,21 @@
 
 ###
 
+# Get ALL places
 GET http://localhost:4000/api/places
 
 ###
+
+# Search a place
+GET http://localhost:4000/api/places/search?name=London
+
+###
+
+# Get ONE place
 GET http://localhost:4000/api/places/{{placeId}}
+
+
+
+
+
+

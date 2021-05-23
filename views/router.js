@@ -11,8 +11,14 @@ router.route('/places')
   .get(placesController.index)
   // .post(placesController.create)
 
+// ? Searching for places
+router.route('/places/search')
+  .get(placesController.search)
+
 router.route('/places/:placeId')
   .get(placesController.show)
+
+
 
 
 export default router
