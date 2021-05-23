@@ -6,3 +6,24 @@ GET http://localhost:4000/api/places
 
 ###
 GET http://localhost:4000/api/places/{{placeId}}
+
+###
+POST http://localhost:4000/api/places
+# Authorization: Bearer
+content-type: application/json
+
+{
+  "name": "Brick Lane",
+  "description": " It's a cool place",
+  "area": "Shoreditch",
+  "address": "Brick Lane",
+ "postcode": "E1 6QL",
+  "lat": 123,
+  "long": 321,
+  "categories": [
+    "shopping", "coffee shops"
+    ],
+  "rating": 5
+}
+
+###

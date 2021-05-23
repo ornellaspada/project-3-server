@@ -9,7 +9,7 @@ const router = express.Router()
 
 router.route('/places')
   .get(placesController.index)
-  // .post(placesController.create)
+  .post(placesController.create)
 
 router.route('/places/:placeId')
   .get(placesController.show)

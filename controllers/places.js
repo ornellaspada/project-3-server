@@ -29,7 +29,18 @@ async function show(req, res, next) {
   }
 }
 
+async function create(req, res, next){
+  req.body.user = req.currentUser
+  try {
+    const newPlace = await PlaceModel.create(req.body)
+    res.status(201).json(newPlace)
+  } catch (e) {
+    next(e)
+  }
+}
+
 export default {
   index,
   show,
+  create,
 }
