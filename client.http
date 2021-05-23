@@ -1,4 +1,4 @@
-@placeId = 60aa66d3aebdfe2b77fe2b80
+@placeId = 60aa621667371b0d8
 
 ###
 
@@ -36,9 +36,13 @@ content-type: application/json
   "rating": 5
 }
 
-###
+### Delete a place
 
-# Update a place
+DELETE http://localhost:4000/api/places/{{placeId}}
+
+
+
+### Update a place
 PUT http://localhost:4000/api/places/{{placeId}}
 Content-Type: application/json
 
@@ -76,6 +80,6 @@ POST http://localhost:4000/api/login
 content-type: application/json
 
 {
-  "email":"lari1@lari16",
-  "password": "lari1"
+  "email":"lari2@lari16",
+  "password": "lari2"
   }
