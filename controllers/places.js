@@ -15,7 +15,7 @@ async function index(req, res, next) {
 // ? function to GET only one place
 async function show(req, res, next) {
   try {
-    const placeId = req.params.id
+    const placeId = req.params.placeId
     const place = await PlaceModel.findById(placeId).populate('user')
     console.log(place)
     
