@@ -1,18 +1,33 @@
 import mongoose from 'mongoose'
-
-import uniqueValidator from 'mongoose-unique-validator'
 import mongooseHidden from 'mongoose-hidden'
+import uniqueValidator from 'mongoose-unique-validator'
+import bcrypt from 'bcrypt'
 
-// import bcrypt from 'bcrypt'
 
-const userSchema = new mongoose.Schema({
+
+const schema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
-  email: { type: String, required: true, unique: true },
+  email: { type: String, required: true , unique: true },
   password: { type: String, required: true },
 })
 
-userSchema.plugin(uniqueValidator)
+schema.pre('save', function encryptPassword(next) {
 
-userSchema.plugin(mongooseHidden({ defaultHidden: { password: true, _id: true } }))
+  if (this.isModified('password')) {
+    this.password = bcrypt.hashSync(this.password, bcrypt.genSaltSync())
+  }
 
-export default mongoose.model('UserModel', userSchema)
+  next()
+})
+
+schema.methods.validatePassword = function valudatePassword(password) {
+  return bcrypt.compareSync(password, this.password)
+}
+
+
+
+schema.plugin(uniqueValidator)
+schema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true, _id: true } }))
+
+
+export default mongoose.model('User', schema)
