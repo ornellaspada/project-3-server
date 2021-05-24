@@ -1,5 +1,9 @@
 import PlaceModel from '../models/placeModel.js'
 
+
+import { NotFound } from '../lib/error.js'
+
+
 // ? function to GET all places 
 async function index(req, res, next) {
   try {
@@ -38,7 +42,7 @@ async function show(req, res, next) {
     console.log(place)
     
     if (!place) {
-      return res.status(404).json({ message: 'No place found' })
+      throw new NotFound('No pokemon found.')
     }
 
     res.status(200).json(place)
@@ -59,9 +63,9 @@ async function create(req, res, next){
 // ? function for removing
 async function remove(req, res, next) {
   try {
-    // ? get user id
+    // // ? get user id
     // const currentUserId = req.currentUserId._id
-    // // ? get team data we might remove
+    // ? get team data we might remove
     // console.log(currentUserId)
     const place = await PlaceModel.findById(req.params.placeId)
     console.log(place)
@@ -87,7 +91,7 @@ async function update(req, res, next) {
   try { 
     const placeId = req.params.placeId
     const body = req.body
-
+    console.log(body)
     const updatePlace = await PlaceModel.findByIdAndUpdate(placeId, body, { new: true })
     console.log(updatePlace)
 
