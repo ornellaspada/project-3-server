@@ -7,8 +7,6 @@ import reviewController from '../controllers/review.js'
 
 import secureRoute from '../middleware/secureRoute.js'
 
-import secureRoute from '../middleware/secureRoute.js'
-
 const router = express.Router()
 
 // ? Get all places and create a place
