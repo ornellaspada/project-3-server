@@ -1,5 +1,7 @@
 import PlaceModel from '../models/placeModel.js'
 
+import { NotFound } from '../lib/error.js'
+
 async function create(req, res, next) {
   req.body.user = req.currentUser
   try {
@@ -7,7 +9,7 @@ async function create(req, res, next) {
       .populate('user')
     
     if (!place) {
-      return res.status(404).json({ message: 'No place found' })
+      throw new NotFound('No pokemon found.')
     }
 
     place.reviews.push(req.body)

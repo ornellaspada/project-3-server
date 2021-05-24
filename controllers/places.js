@@ -1,5 +1,9 @@
 import PlaceModel from '../models/placeModel.js'
 
+
+import { NotFound } from '../lib/error.js'
+
+
 // ? function to GET all places 
 async function index(req, res, next) {
   try {
@@ -38,7 +42,7 @@ async function show(req, res, next) {
     console.log(place)
     
     if (!place) {
-      return res.status(404).json({ message: 'No place found' })
+      throw new NotFound('No pokemon found.')
     }
 
     res.status(200).json(place)
