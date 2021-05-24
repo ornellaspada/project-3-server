@@ -8,7 +8,7 @@ export default [
     lat: 2,
     long: 2,
     image: 'https',
-    catagories: [
+    categories: [
       'skate',
       'park'
     ],
@@ -23,7 +23,7 @@ export default [
     lat: 21,
     long: 21,
     image: 'https',
-    catagories: [
+    categories: [
       'skate',
       'park'
     ],
