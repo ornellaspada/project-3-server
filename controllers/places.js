@@ -63,21 +63,21 @@ async function create(req, res, next){
 // ? function for removing
 async function remove(req, res, next) {
   try {
-    // // ? get user id
-    // const currentUserId = req.currentUserId._id
+    // ? get user id
+    const currentUserId = req.currentUser._id
     // ? get team data we might remove
-    // console.log(currentUserId)
+    console.log(currentUserId)
     const place = await PlaceModel.findById(req.params.placeId)
     console.log(place)
     // ? you cant delete a place that doesn't exist
-    // if (!currentUserId) {
-    //   throw new NotFound('no place found')
-    // }
+    if (!currentUserId) {
+      throw new NotFound('no place found')
+    }
     
-    // ? check id of user whos trying to deled again and user id on team it self
-    // if (!currentUserId.equals(place.user)) {
-    //   return res.status(401).json({ message: 'Unauthorized' })
-    // }
+    // ? check id of user who's trying to deled again and user id on team it self
+    if (!currentUserId.equals(place.user)) {
+      return res.status(401).json({ message: 'Unauthorized' })
+    }
     // ? if that stage is passed the user has a place they created and therefore can be deleted
     await place.deleteOne()
 
@@ -89,21 +89,33 @@ async function remove(req, res, next) {
 
 async function update(req, res, next) {
   try { 
-    const placeId = req.params.placeId
-    const body = req.body
-    console.log(body)
-    const updatePlace = await PlaceModel.findByIdAndUpdate(placeId, body, { new: true })
-    console.log(updatePlace)
+    const currentUserId = req.currentUser._id
+    console.log(currentUserId)
 
-    updatePlace.save() 
+    const place = await PlaceModel.findById(req.params.placeId)
+    console.log(place)
+
+    if (!place) {
+      throw new NotFound('No places found.')
+    }
+
+    if (!currentUserId.equals(place.user)) {
+      return res.status(401).json({ message: 'Unauthorized' })
+    }
     
-    res.status(202).json(updatePlace)
-    
+    place.set(req.body)
+
+    console.log(req.body)
+
+    place.save()
+
+    res.status(202).json(place)
+
   } catch (e) {
     next(e)
   }
 }
-
+console.log(update)
 
 export default {
   index,

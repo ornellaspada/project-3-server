@@ -29,6 +29,9 @@ router.route('/places/:placeId')
 router.route('/places/:placeId/review')
   .post(secureRoute, reviewController.create)
 
+router.route('/places/:placeId/review/:reviewId')
+  .put(secureRoute, reviewController.update)
+
 // ? Users 
 router.route('/register')
   .post(userController.register)

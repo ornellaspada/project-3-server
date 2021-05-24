@@ -20,9 +20,9 @@ const placeSchema = new mongoose.Schema({
   categories: { 
     type: [String],
     required: true,
-    // validate: [
-    //   { validator: (categories) => categories.length > 0, msg: 'You must have at least 1 category!' }
-    // ],
+    validate: [
+      { validator: (categories) => categories.length > 0, msg: 'You must have at least 1 category!' }
+    ],
   },
   rating: { type: Number, required: true },
   user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
