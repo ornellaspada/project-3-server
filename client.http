@@ -1,4 +1,4 @@
-@placeId = 60ab63b5dbdd1b13505bf086
+@placeId = 60ab7e4c8db24236dc754274
 @userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiNjM2ZmRhODJiZDEyZGFkNmFiYTMiLCJpYXQiOjE2MjE4NDQ4NzYsImV4cCI6MTYyMTg4ODA3Nn0.qe3bR9blzmhgoQZEWw2cK2KkyNGStDgfqGD_Tv-omfQ
 
 ###
@@ -20,7 +20,7 @@ GET http://localhost:4000/api/places/{{placeId}}
 
 # Create a place
 POST http://localhost:4000/api/places
-# Authorization: Bearer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiN2U5NTY4YWZhZDM2ZjFlNjUxZmYiLCJpYXQiOjE2MjE4NTE3OTksImV4cCI6MTYyMTg5NDk5OX0.bjuoMYXU6OH7RL1nFTZirNsUyzXHW5jbapm0sqnKkAc
 content-type: application/json
 
 {
@@ -40,14 +40,16 @@ content-type: application/json
 ### Delete a place
 
 DELETE http://localhost:4000/api/places/{{placeId}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiN2U5NTY4YWZhZDM2ZjFlNjUxZmYiLCJpYXQiOjE2MjE4NTE3OTksImV4cCI6MTYyMTg5NDk5OX0.bjuoMYXU6OH7RL1nFTZirNsUyzXHW5jbapm0sqnKkAc
 
 
 
 ### Update a place
 PUT http://localhost:4000/api/places/{{placeId}}
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiN2U5NTY4YWZhZDM2ZjFlNjUxZmYiLCJpYXQiOjE2MjE4NTE3OTksImV4cCI6MTYyMTg5NDk5OX0.bjuoMYXU6OH7RL1nFTZirNsUyzXHW5jbapm0sqnKkAc
 Content-Type: application/json
 
-[
+
   {
     "categories": [],
     "name": "London1",
@@ -60,7 +62,7 @@ Content-Type: application/json
     "rating": 5,
     "__v": 0
   }
-]
+
 
 ###
 

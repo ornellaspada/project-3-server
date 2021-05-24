@@ -20,6 +20,40 @@ async function create(req, res, next) {
   }
 }
 
+async function update(req, res, next) {
+  try {
+    // grab params for placeId and commentId
+    const { placeId, reviewId } = req.params
+
+    // ? step 1 find place by placeId 
+    const place = await PlaceModel.findById(placeId)
+
+    // if (!place) {
+    //   throw new NotFound('No Places Found.')
+    // }
+
+    // ? step 2 find the comment by its reviewId
+    // ? reviews is like an array, but with extra methods, like id, to get a review by its id
+    const review = place.reviews.id(reviewId)
+
+    // ? step 3 we need to check if the review is outs 
+    // ? check user ID of currentUser with user id of the comment
+    if (!req.currentUser._id.equals(review.user)) {
+      return res.status(401).send({ message: 'Unauthorized' })
+    }
+
+    // ? step 4 save review after updated
+    review.set(req.body)
+    const savedReview = await place.save()
+
+    res.set(savedReview)
+
+  } catch (e) {
+    next(e)
+  }
+}
+
 export default {
   create,
+  update,
 }

@@ -4,12 +4,14 @@ import express from 'express'
 import placesController from '../controllers/places.js'
 import userController from '../controllers/user.js'
 
+import secureRoute from '../middleware/secureRoute.js'
+
 const router = express.Router()
 
 // ? Get all places and create a place
 router.route('/places')
   .get(placesController.index)
-  .post(placesController.create)
+  .post(secureRoute, placesController.create)
 
 // ? Searching for places
 router.route('/places/search')
@@ -18,8 +20,8 @@ router.route('/places/search')
 // ? Get one place, update and delete a place
 router.route('/places/:placeId')
   .get(placesController.show)
-  .delete(placesController.remove)
-  .put(placesController.update)
+  .delete(secureRoute, placesController.remove)
+  .put(secureRoute, placesController.update)
 
 // ? Users 
 router.route('/register')
