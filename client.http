@@ -1,5 +1,7 @@
-@placeId = 60ab848c37b7923768a51239
-@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiODQ4YzM3Yjc5MjM3NjhhNTEyMzciLCJpYXQiOjE2MjE4NTM0NDYsImV4cCI6MTYyMTg5NjY0Nn0.OFRkFuoQuwbMzsktrHSKIhmapL2LaF6sowopN4iGslI
+@placeId = 60abadfd48769d4c90a0ebda
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiYWRhYjU4ZTgyYTRjN2M2YzI2MzciLCJpYXQiOjE2MjE4NjM4OTIsImV4cCI6MTYyMTkwNzA5Mn0.y8xEDsQfGYWYIExkb1ZbcNQVswTIht8xOcyPOWnAjLM
+
+@reviewId = 60aba6d3668dbe46d3794e5c
 
 ###
 
@@ -25,6 +27,7 @@ content-type: application/json
 
 {
   "name": "Brick Lane",
+  "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3UGZbVXx2yO6DqG6ldrwN6A57zp8Z6u_T4A&usqp=CAU",
   "description": " It's a cool place",
   "area": "Shoreditch",
   "address": "Brick Lane",
@@ -40,13 +43,13 @@ content-type: application/json
 ### Delete a place
 
 DELETE http://localhost:4000/api/places/{{placeId}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiN2U5NTY4YWZhZDM2ZjFlNjUxZmYiLCJpYXQiOjE2MjE4NTE3OTksImV4cCI6MTYyMTg5NDk5OX0.bjuoMYXU6OH7RL1nFTZirNsUyzXHW5jbapm0sqnKkAc
+Authorization: Bearer {{userToken}}
 
 
 
 ### Update a place
 PUT http://localhost:4000/api/places/{{placeId}}
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiN2U5NTY4YWZhZDM2ZjFlNjUxZmYiLCJpYXQiOjE2MjE4NTE3OTksImV4cCI6MTYyMTg5NDk5OX0.bjuoMYXU6OH7RL1nFTZirNsUyzXHW5jbapm0sqnKkAc
+Authorization: Bearer {{userToken}}
 Content-Type: application/json
 
 
@@ -72,19 +75,23 @@ POST http://localhost:4000/api/register
 content-type: application/json
 
 {
-  "username": "lari2",
-  "password": "lari2",
-  "email":"lari2@lari16"
+  "username": "gsr",
+  "password": "gsr",
+  "passwordConfirmation": "gsr",
+  "email":"gsr@gsr16",
+  "emailConfirmation": "gsr@gsr16"
+
   }
+
 
 ###
 
-POST http://localhost:4000/api/login
+POST http://localhost:4000/api/login§
 content-type: application/json
 
 {
-  "email":"elsa@elsa.com",
-  "password": "shush"
+  "email":"gsr@gsr16",
+  "password": "gsr"
   }
 
 ###
@@ -97,5 +104,15 @@ content-type: application/json
 Authorization: Bearer {{userToken}}
 
 {
-  "text": "So beautiful!"
+  "text": "So beautiful!!!!"
+}
+
+###
+
+PUT http://localhost:4000/api/places/{{placeId}}/review/{{reviewId}}
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "text": "third 1"
 }

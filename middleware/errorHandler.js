@@ -1,6 +1,6 @@
 export default function errorHandler(err, req, res, next) {
 
-  console.log('🤖 There was an error.')
+  console.log('🤖 Error Has Occurred')
   console.log(err.name)
   console.log(err)
 

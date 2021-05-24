@@ -33,14 +33,16 @@ async function update(req, res, next) {
 
     // ? step 1 find place by placeId 
     const place = await PlaceModel.findById(placeId)
+    console.log(place)
 
-    // if (!place) {
-    //   throw new NotFound('No Places Found.')
-    // }
+    if (!place) {
+      throw new NotFound('No Places Found.')
+    }
 
     // ? step 2 find the comment by its reviewId
     // ? reviews is like an array, but with extra methods, like id, to get a review by its id
     const review = place.reviews.id(reviewId)
+    console.log(review)
 
     // ? step 3 we need to check if the review is outs 
     // ? check user ID of currentUser with user id of the comment
@@ -52,7 +54,7 @@ async function update(req, res, next) {
     review.set(req.body)
     const savedReview = await place.save()
 
-    res.set(savedReview)
+    res.send(savedReview)
 
   } catch (e) {
     next(e)
