@@ -1,0 +1,90 @@
+@placeId = 60ab63b5dbdd1b13505bf086
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiNjM2ZmRhODJiZDEyZGFkNmFiYTMiLCJpYXQiOjE2MjE4NDQ4NzYsImV4cCI6MTYyMTg4ODA3Nn0.qe3bR9blzmhgoQZEWw2cK2KkyNGStDgfqGD_Tv-omfQ
+
+###
+
+# Get ALL places
+GET http://localhost:4000/api/places
+
+###
+
+# Search a place
+GET http://localhost:4000/api/places/search?name=London
+
+###
+
+# Get ONE place
+GET http://localhost:4000/api/places/{{placeId}}
+
+###
+
+# Create a place
+POST http://localhost:4000/api/places
+Authorization: Bearer {{userToken}}
+content-type: application/json
+
+{
+  "name": "Brick Lane",
+  "description": " It's a cool place",
+  "area": "Shoreditch",
+  "address": "Brick Lane",
+  "postcode": "E1 6QL",
+  "lat": 123,
+  "long": 321,
+  "categories": [
+    "shopping", "coffee shops"
+    ],
+  "rating": 5
+}
+
+###
+
+# Delete a place 
+
+DELETE http://localhost:4000/api/places/{{placeId}}
+Authorization: Bearer {{userToken}}
+
+###
+
+# Update a place
+PUT http://localhost:4000/api/places/{{placeId}}
+Authorization: Bearer {{userToken}}
+Content-Type: application/json
+
+[
+  {
+    "categories": ["park", "restaurant"],
+    "name": "London1",
+    "description": "a very dangerous place",
+    "area": "shepard bush",
+    "address": ".....",
+    "postcode": "stop asking questions",
+    "lat": 2,
+    "long": 2,
+    "rating": 5,
+    "__v": 0
+  }
+]
+
+###
+
+# USERS 
+
+POST http://localhost:4000/api/register
+content-type: application/json
+
+{
+  "username": "lari2",
+  "password": "lari2",
+  "email":"lari2@lari16"
+  }
+
+###
+
+POST http://localhost:4000/api/login
+content-type: application/json
+
+{
+  "email": "elsa@elsa.com",
+  "password": "shush"
+  }
