@@ -20,7 +20,7 @@ GET http://localhost:4000/api/places/{{placeId}}
 
 # Create a place
 POST http://localhost:4000/api/places
-Authorization: Bearer {{userToken}}
+# Authorization: Bearer
 content-type: application/json
 
 {
@@ -37,23 +37,19 @@ content-type: application/json
   "rating": 5
 }
 
-###
-
-# Delete a place 
+### Delete a place
 
 DELETE http://localhost:4000/api/places/{{placeId}}
-Authorization: Bearer {{userToken}}
 
-###
 
-# Update a place
+
+### Update a place
 PUT http://localhost:4000/api/places/{{placeId}}
-Authorization: Bearer {{userToken}}
 Content-Type: application/json
 
 [
   {
-    "categories": ["park", "restaurant"],
+    "categories": [],
     "name": "London1",
     "description": "a very dangerous place",
     "area": "shepard bush",
@@ -85,6 +81,6 @@ POST http://localhost:4000/api/login
 content-type: application/json
 
 {
-  "email": "elsa@elsa.com",
-  "password": "shush"
+  "email":"lari2@lari16",
+  "password": "lari2"
   }

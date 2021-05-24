@@ -25,7 +25,7 @@ const placeSchema = new mongoose.Schema({
     // ],
   },
   rating: { type: Number, required: true },
-  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  // user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
 //   reviews: [reviewSchema],
 })
 
