@@ -27,6 +27,7 @@ content-type: application/json
 
 {
   "name": "Brick Lane",
+  "image":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3UGZbVXx2yO6DqG6ldrwN6A57zp8Z6u_T4A&usqp=CAU",
   "description": " It's a cool place",
   "area": "Shoreditch",
   "address": "Brick Lane",

@@ -12,6 +12,7 @@ const reviewSchema = new mongoose.Schema({
 const placeSchema = new mongoose.Schema({
   name: { type: String, required: true },
   description: { type: String, required: true },
+  image: { type: String, required: true },
   area: { type: String, required: true },
   address: { type: String, required: true },
   postcode: { type: String, required: true },
