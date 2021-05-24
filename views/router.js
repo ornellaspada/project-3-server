@@ -3,6 +3,9 @@
 import express from 'express'
 import placesController from '../controllers/places.js'
 import userController from '../controllers/user.js'
+import reviewController from '../controllers/review.js'
+
+import secureRoute from '../middleware/secureRoute.js'
 
 const router = express.Router()
 
@@ -20,6 +23,10 @@ router.route('/places/:placeId')
   .get(placesController.show)
   .delete(placesController.remove)
   .put(placesController.update)
+
+// ? Reviews
+router.route('/places/:placeId/review')
+  .post(secureRoute, reviewController.create)
 
 // ? Users 
 router.route('/register')

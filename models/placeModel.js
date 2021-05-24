@@ -1,13 +1,13 @@
 import mongoose from 'mongoose'
 
-// const reviewSchema = new mongoose.Schema({
-//   text: { type: String, required: true },
-//   user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-//   image: { type: String },
-//   rating: { type: Number },
-// }, {
-//   timestamps: true,
-// })
+const reviewSchema = new mongoose.Schema({
+  text: { type: String, required: true },
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  image: { type: String },
+  rating: { type: Number },
+}, {
+  timestamps: true,
+})
 
 const placeSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -25,8 +25,8 @@ const placeSchema = new mongoose.Schema({
     // ],
   },
   rating: { type: Number, required: true },
-  // user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
-//   reviews: [reviewSchema],
+  user: { type: mongoose.Schema.ObjectId, ref: 'User', required: true },
+  reviews: [reviewSchema],
 })
 
 export default mongoose.model('PlaceModel' , placeSchema)
