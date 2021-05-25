@@ -1,27 +1,12 @@
 export default [
   {
-    name: 'London',
-    description: 'a very dangerous place',
-    area: 'shepard bush',
-    address: '..',
-    postcode: 'stop asking questions',
-    lat: 2,
-    long: 2,
-    image: 'https',
-    categories: [
-      'skate',
-      'park'
-    ],
-    rating: 5,
-  },
-  {
     name: 'leek Street',
     description: 'a not very dangerous place',
     area: 'shepard bush',
     address: '..',
     postcode: 'stop asking mnore questions',
-    lat: 21,
-    long: 21,
+    lat: 51.504796,
+    long: -0.222366,
     image: 'https',
     categories: [
       'skate',
@@ -35,8 +20,8 @@ export default [
     area: 'Holborn',
     address: '13 Lincoln\'s Inn Fields',
     postcode: 'WC2A 3BP',
-    lat: 21,
-    long: 21,
+    lat: 51.515511,
+    long: -0.116360,
     image: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjhdFm2Kqj5ILPud6oL5L_y8-z-yR1E-gGw&usqp=CAU',
     categories: [
       'museum',
@@ -50,8 +35,8 @@ export default [
     area: 'Rotherhithe',
     address: 'Southwalk Park',
     postcode: 'SE1 0AB',
-    lat: 21,
-    long: 21,
+    lat: 51.494898,
+    long: -0.055680,
     image: ' https://upload.wikimedia.org/wikipedia/commons/f/f8/Ada_Salter_Rose_Garden._Southwark_Park%2C_Rotherhithe%2C_London%2C_SE16_-_geograph.org.uk_-_1516940.jpg ',
     categories: [
       'garden',
@@ -65,8 +50,8 @@ export default [
     area: 'Mayfair',
     address: 'Brook St, London ',
     postcode: 'w1k 4hr',
-    lat: 21,
-    long: 21,
+    lat: 51.512577,
+    long: -0.148252,
     image: ' ',
     categories: [
       'hotel',
@@ -81,23 +66,8 @@ export default [
     area: 'Chelsea',
     address: '66 Royal Hospital Road',
     postcode: 'SW3 4HS',
-    lat: 21,
-    long: 21,
-    image: ' ',
-    categories: [
-      'garden',
-      'nature'
-    ],
-    rating: 5, 
-  }, 
-  {
-    name: 'Chelsea Physics ',
-    description: 'For Londoners, this garden is nestled in a microclimate next to the Thames on Swan Walk in Chelsea. The walled space was founded in 1673 by the Worshipful Society of Apothecaries for apprentices to study medicinal plants. It’s also the oldest botanical garden in London. Recently the garden secured funding for its heritage project to restore its historic range of Victorian-designed glasshouses, with work set to begin in spring this year.',
-    area: 'Chelsea',
-    address: '66 Royal Hospital Road',
-    postcode: 'SW3 4HS',
-    lat: 21,
-    long: 21,
+    lat: 51.486840,
+    long: -0.160200,
     image: ' ',
     categories: [
       'garden',
@@ -105,7 +75,4 @@ export default [
     ],
     rating: 5, 
   }
-
-
-
 ]
