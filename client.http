@@ -11,7 +11,7 @@ GET http://localhost:4000/api/places
 ###
 
 # Search a place
-GET http://localhost:4000/api/places/search?name=London
+GET http://localhost:4000/api/places/search?rating=5
 
 ###
 
@@ -115,4 +115,13 @@ Authorization: Bearer {{userToken}}
 
 {
   "text": "third 1"
+}
+
+### Add place to MyFav
+POST  http://localhost:4000/api/favourites/{{placeId}}
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "favourites": []
 }

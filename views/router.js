@@ -18,6 +18,11 @@ router.route('/places')
 router.route('/places/search')
   .get(placesController.search)
 
+// ? Add and remove places in MyFavourites
+router.route('/favourites/:placeId')
+  .post(secureRoute, userController.addFav)
+  .put(secureRoute, placesController.update)
+
 // ? Get one place, update and delete a place
 router.route('/places/:placeId')
   .get(placesController.show)
