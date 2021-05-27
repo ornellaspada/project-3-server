@@ -73,6 +73,8 @@ async function remove(req, res, next) {
     if (!currentUserId) {
       throw new NotFound('no place found')
     }
+
+  
     
     // ? check id of user who's trying to deled again and user id on team it self
     if (!currentUserId.equals(place.user)) {

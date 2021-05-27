@@ -1,5 +1,5 @@
 @placeId = 60abadfd48769d4c90a0ebda
-@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFiYWRhYjU4ZTgyYTRjN2M2YzI2MzciLCJpYXQiOjE2MjE4NjM4OTIsImV4cCI6MTYyMTkwNzA5Mn0.y8xEDsQfGYWYIExkb1ZbcNQVswTIht8xOcyPOWnAjLM
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFlNjg2Yzc0YWU5YzIyZDQzZjEwYTAiLCJpYXQiOjE2MjIwNDI3NDgsImV4cCI6MTYyMjA4NTk0OH0.rgG2fsIyiN5m-VXo1jreUO8mXlB5qm9fmVN9_tKEBJA
 
 @reviewId = 60aba6d3668dbe46d3794e5c
 
@@ -86,7 +86,7 @@ content-type: application/json
 
 ###
 
-POST http://localhost:4000/api/login§
+POST http://localhost:4000/api/login
 content-type: application/json
 
 {
@@ -115,4 +115,13 @@ Authorization: Bearer {{userToken}}
 
 {
   "text": "third 1"
+}
+
+### Add place to MyFav
+POST  http://localhost:4000/api/favourites/{{placeId}}
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
+{
+  "favourites": []
 }
