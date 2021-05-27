@@ -11,7 +11,7 @@ GET http://localhost:4000/api/places
 ###
 
 # Search a place
-GET http://localhost:4000/api/places/search?name=London
+GET http://localhost:4000/api/places/search?rating=5
 
 ###
 
