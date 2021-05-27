@@ -33,7 +33,7 @@ export default [
     name: 'Ada Salter Rose Garden',
     description: 'There is a lovely rose garden, a duck pond, two cafes, tennis courts, a bandstand, outdoor gym, a bandstand and four toilets.',
     area: 'Rotherhithe',
-    address: 'Southwalk Park',
+    address: 'Southwark Park',
     postcode: 'SE1 0AB',
     lat: 51.494898,
     long: -0.055680,

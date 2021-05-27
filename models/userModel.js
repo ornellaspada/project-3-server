@@ -4,7 +4,6 @@ import uniqueValidator from 'mongoose-unique-validator'
 import bcrypt from 'bcrypt'
 
 
-
 const schema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true , unique: true },
@@ -24,7 +23,7 @@ schema.methods.validatePassword = function validatePassword(password) {
   return bcrypt.compareSync(password, this.password)
 }
 
-// !!!!!!!!!!!!!!!!!!!!!!
+
 // ? Password confirmation
 schema
 
@@ -41,9 +40,8 @@ schema
     }
     next()
   })
-// !!!!!!!!!!!!!!!!!!!!!!
 
-// ***********************
+
 // ? Email Confirmation
 schema
   .virtual('emailConfirmation')
@@ -59,7 +57,6 @@ schema
     }
     next()
   })
-// ***********************
 
 
 schema.plugin(uniqueValidator)
