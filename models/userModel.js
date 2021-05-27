@@ -9,6 +9,7 @@ const schema = new mongoose.Schema({
   username: { type: String, required: true, unique: true },
   email: { type: String, required: true , unique: true },
   password: { type: String, required: true },
+  favourites: [{ type: mongoose.Schema.ObjectId, ref: 'PlaceModel', required: false }],
 })
 
 schema.pre('save', function encryptPassword(next) {
