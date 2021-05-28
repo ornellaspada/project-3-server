@@ -1,5 +1,5 @@
-@placeId = 60b0b8fad37fc97f053bb840
-@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGIwYjhmOWQzN2ZjOTdmMDUzYmI4M2UiLCJpYXQiOjE2MjIxOTQ0OTIsImV4cCI6MTYyMjIzNzY5Mn0.Uu-hy83MgKD4ERjvG_H7OVQqSQv-yjozAbetfMl3Qcs
+@placeId = 60b0e6d2db5574899a904bbe
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGIwZTZkMmRiNTU3NDg5OWE5MDRiYmIiLCJpYXQiOjE2MjIyMDYzMjUsImV4cCI6MTYyMjI0OTUyNX0.BSUD1y-cRjcqnff82GCuQuj7B9JtXC7SPUnbmIMA3eE
 
 @reviewId = 60aba6d3668dbe46d3794e5c
 
@@ -11,7 +11,7 @@ GET http://localhost:4000/api/places
 ###
 
 # Search a place
-GET http://localhost:4000/api/places/60ad1c72b588f85fb80cb3e5
+GET http://localhost:4000/api/places/{{placeId}}
 
 ###
 GET http://localhost:4000/api/places/search?rating=5
@@ -108,7 +108,7 @@ Authorization: Bearer {{userToken}}
 
 {
   "text": "So beautiful!!!!",
-  "userName": "Elsa24"
+  "userName": "Elsa25"
 }
 
 ###

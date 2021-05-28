@@ -38,6 +38,7 @@ async function search(req, res, next) {
 async function show(req, res, next) {
   try {
     const placeId = req.params.placeId
+    console.log('this is it', placeId)
     const place = await PlaceModel.findById(placeId).populate('user')
     console.log(place)
     
