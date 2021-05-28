@@ -1,5 +1,5 @@
-@placeId = 60abadfd48769d4c90a0ebda
-@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFlNjg2Yzc0YWU5YzIyZDQzZjEwYTAiLCJpYXQiOjE2MjIwNDI3NDgsImV4cCI6MTYyMjA4NTk0OH0.rgG2fsIyiN5m-VXo1jreUO8mXlB5qm9fmVN9_tKEBJA
+@placeId = 60b0b8fad37fc97f053bb840
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGIwYjhmOWQzN2ZjOTdmMDUzYmI4M2UiLCJpYXQiOjE2MjIxOTQ0OTIsImV4cCI6MTYyMjIzNzY5Mn0.Uu-hy83MgKD4ERjvG_H7OVQqSQv-yjozAbetfMl3Qcs
 
 @reviewId = 60aba6d3668dbe46d3794e5c
 
@@ -90,8 +90,8 @@ POST http://localhost:4000/api/login
 content-type: application/json
 
 {
-  "email":"gsr@gsr16",
-  "password": "gsr"
+  "email":"elsa@elsa.com",
+  "password": "shush"
   }
 
 ###
@@ -104,7 +104,8 @@ content-type: application/json
 Authorization: Bearer {{userToken}}
 
 {
-  "text": "So beautiful!!!!"
+  "text": "So beautiful!!!!",
+  "userName": "Elsa24"
 }
 
 ###
