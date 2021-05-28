@@ -61,7 +61,7 @@ schema
 
 
 schema.plugin(uniqueValidator)
-schema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true, _id: true } }))
+schema.plugin(mongooseHidden({ defaultHidden: { password: true, email: true } }))
 
 
 export default mongoose.model('User', schema)
