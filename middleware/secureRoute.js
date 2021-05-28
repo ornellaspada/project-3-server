@@ -11,7 +11,7 @@ export default function secureRoute(req, res, next) {
   console.log(rawToken)
 
   if (!rawToken || !rawToken.startsWith('Bearer')) {
-    return res.status(401).json({ message: 'Unauthorized ' })
+    return res.status(401).json({ message: 'Unauthorized1 ' })
   }
 
   const token = rawToken.replace('Bearer ', '')
@@ -21,15 +21,15 @@ export default function secureRoute(req, res, next) {
   jwt.verify(token, secret, async (err, payload) => {
 
     if (err) {
-      return res.status(401).json({ message: 'Unauthorized ' })
+      return res.status(401).json({ message: 'Unauthorized2 ' })
     }
   
 
     // ? Get the user using our payload.userId stick the user on the request
-    const user = await UserModel.findById(payload.userId)
+    const user = await  UserModel.findById(payload.userId)
 
     if (!user) {
-      return res.status(401).json({ message: 'Unauthorized ' })
+      return res.status(401).json({ message: 'Unauthorized3 ' })
     }
 
     req.currentUser = user

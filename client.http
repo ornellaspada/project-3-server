@@ -1,5 +1,5 @@
-@placeId = 60ad1c83d23f764d353a2fac
-@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFlMmUzOTE4MmRhYjRkNGZjOWIxM2EiLCJpYXQiOjE2MjIxMjUxNDUsImV4cCI6MTYyMjE2ODM0NX0.jeDkCgGyZ_lBb7a0MOaFEiLXOGWQyHY7pIQ10_1kdLc
+@placeId = 60ad1c83d23f764d353a2faa
+@userToken = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MGFlMmUzOTE4MmRhYjRkNGZjOWIxM2EiLCJpYXQiOjE2MjIxOTMyODUsImV4cCI6MTYyMjIzNjQ4NX0.xVDzH67XNocpGgeRJo8jaGM4NEy3j3tc_GPBTN6AP0Y
 
 @reviewId = 60aba6d3668dbe46d3794e5c
 
@@ -125,3 +125,18 @@ Authorization: Bearer {{userToken}}
 {
   "favourites": []
 }
+###
+PUT http://localhost:4000/api/favourites/{{placeId}}
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
+###
+GET http://localhost:4000/api/favourites/{{placeId}}
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
+###
+GET http://localhost:4000/api/favourites
+content-type: application/json
+Authorization: Bearer {{userToken}}
+
