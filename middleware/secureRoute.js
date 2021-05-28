@@ -23,10 +23,9 @@ export default function secureRoute(req, res, next) {
     if (err) {
       return res.status(401).json({ message: 'Unauthorized2 ' })
     }
-  
 
     // ? Get the user using our payload.userId stick the user on the request
-    const user = await  UserModel.findById(payload.userId)
+    const user = await  UserModel.findById(payload.sub)
 
     if (!user) {
       return res.status(401).json({ message: 'Unauthorized3 ' })
