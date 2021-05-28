@@ -8,6 +8,8 @@ export default [
     lat: 51.504796,
     long: -0.222366,
     image: 'https',
+    district: 'Southwark',
+    region: 'London',
     categories: [
       'skate',
       'park'
@@ -20,6 +22,8 @@ export default [
     area: 'Holborn',
     address: '13 Lincoln\'s Inn Fields',
     postcode: 'WC2A 3BP',
+    district: 'Southwark',
+    region: 'London',
     lat: 51.515511,
     long: -0.116360,
     image: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjhdFm2Kqj5ILPud6oL5L_y8-z-yR1E-gGw&usqp=CAU',
@@ -33,8 +37,10 @@ export default [
     name: 'Ada Salter Rose Garden',
     description: 'There is a lovely rose garden, a duck pond, two cafes, tennis courts, a bandstand, outdoor gym, a bandstand and four toilets.',
     area: 'Rotherhithe',
-    address: 'Southwalk Park',
+    address: 'Southwark Park',
     postcode: 'SE1 0AB',
+    district: 'Southwark',
+    region: 'London',
     lat: 51.494898,
     long: -0.055680,
     image: ' https://upload.wikimedia.org/wikipedia/commons/f/f8/Ada_Salter_Rose_Garden._Southwark_Park%2C_Rotherhithe%2C_London%2C_SE16_-_geograph.org.uk_-_1516940.jpg ',
@@ -52,6 +58,8 @@ export default [
     postcode: 'w1k 4hr',
     lat: 51.512577,
     long: -0.148252,
+    district: 'Southwark',
+    region: 'London',
     image: ' ',
     categories: [
       'hotel',
@@ -68,6 +76,8 @@ export default [
     postcode: 'SW3 4HS',
     lat: 51.486840,
     long: -0.160200,
+    district: 'Southwark',
+    region: 'London',
     image: ' ',
     categories: [
       'garden',

@@ -11,6 +11,9 @@ GET http://localhost:4000/api/places
 ###
 
 # Search a place
+GET http://localhost:4000/api/places/{{placeId}}
+
+###
 GET http://localhost:4000/api/places/search?rating=5
 
 ###
@@ -90,8 +93,8 @@ POST http://localhost:4000/api/login
 content-type: application/json
 
 {
-  "email":"gsr@gsr16",
-  "password": "gsr"
+  "email":"elsa@elsa.com",
+  "password": "shush"
   }
 
 ###
@@ -104,7 +107,8 @@ content-type: application/json
 Authorization: Bearer {{userToken}}
 
 {
-  "text": "So beautiful!!!!"
+  "text": "So beautiful!!!!",
+  "userName": "Elsa25"
 }
 
 ###
