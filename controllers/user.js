@@ -3,7 +3,7 @@ import jwt from 'jsonwebtoken'
 import User from '../models/userModel.js'
 import { secret } from '../config/environment.js'
 import PlaceModel from '../models/placeModel.js'
-import places from '../db/data/places.js'
+// import places from '../db/data/places.js'
 
 async function register(req, res, next) {
   try {
@@ -29,11 +29,10 @@ async function login(req, res, next) {
     }
 
     const token = jwt.sign(
-      { userId: user._id },
+      { sub: user._id },
       secret,
       { expiresIn: '12h' }
     )
-
 
     console.log('Success!!!')
     res.status(202).json({ message: 'Login successful', token })
