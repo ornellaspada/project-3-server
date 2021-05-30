@@ -1,13 +1,13 @@
 export default [
   {
-    name: 'leek Street',
+    name: 'Leake Street tunnel',
     description: 'a not very dangerous place',
     area: 'shepard bush',
     address: '..',
     postcode: 'stop asking mnore questions',
     lat: 51.504796,
     long: -0.222366,
-    image: 'https',
+    image: 'https://i.pinimg.com/originals/9c/b4/57/9cb45750f87bb6ac322d1bd5786685e8.jpg',
     district: 'Southwark',
     region: 'London',
     categories: [
@@ -51,7 +51,7 @@ export default [
     rating: 5, 
   }, 
   {
-    name: 'Claridge Hotel ',
+    name: 'Claridge Hotel',
     description: 'There is something magical about a Claridge’s room or suite. As well as being among the most spacious in London, each one has been beautifully designed and furnished, complete with many thoughtful, luxurious touches.',
     area: 'Mayfair',
     address: 'Brook St, London ',
@@ -60,7 +60,7 @@ export default [
     long: -0.148252,
     district: 'Southwark',
     region: 'London',
-    image: ' ',
+    image: 'https://media.vanityfair.com/photos/54cab789494254fc0996f14b/master/pass/image.jpg',
     categories: [
       'hotel',
       'leisure',
@@ -78,7 +78,7 @@ export default [
     long: -0.160200,
     district: 'Southwark',
     region: 'London',
-    image: ' ',
+    image: 'https://youimg1.tripcdn.com/target/100g1f000001gqxja8684_C_750_500.jpg?proc=source%2Ftrip',
     categories: [
       'garden',
       'nature'
