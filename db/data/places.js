@@ -1,19 +1,15 @@
 export default [
   {
-    name: 'Leake Street tunnel',
-    description: 'a not very dangerous place',
+    name: 'Leake Street arches',
+    description: 'Leake Street (also known as the Banksy Tunnel) is a road tunnel in Lambeth, London where graffiti is tolerated. The walls are decorated with graffiti, initially created during the Cans Festival organised by Banksy on 3–5 May 2008.[1] The festival ran again on the August Bank Holiday weekend 2008.',
     area: 'shepard bush',
-    address: '..',
-    postcode: 'stop asking mnore questions',
-    lat: 51.504796,
-    long: -0.222366,
+    address: 'Leake St, London',
+    postcode: 'SE1 8SW',
+    lat: 51.501550,
+    long: -0.114890,
     image: 'https://i.pinimg.com/originals/9c/b4/57/9cb45750f87bb6ac322d1bd5786685e8.jpg',
     district: 'Southwark',
     region: 'London',
-    categories: [
-      'skate',
-      'park'
-    ],
     rating: 5,
   },
   {
@@ -27,10 +23,6 @@ export default [
     lat: 51.515511,
     long: -0.116360,
     image: ' https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNjhdFm2Kqj5ILPud6oL5L_y8-z-yR1E-gGw&usqp=CAU',
-    categories: [
-      'museum',
-      'art'
-    ],
     rating: 5, 
   },
   {
@@ -44,10 +36,6 @@ export default [
     lat: 51.494898,
     long: -0.055680,
     image: ' https://upload.wikimedia.org/wikipedia/commons/f/f8/Ada_Salter_Rose_Garden._Southwark_Park%2C_Rotherhithe%2C_London%2C_SE16_-_geograph.org.uk_-_1516940.jpg ',
-    categories: [
-      'garden',
-      'nature'
-    ],
     rating: 5, 
   }, 
   {
@@ -61,11 +49,6 @@ export default [
     district: 'Southwark',
     region: 'London',
     image: 'https://media.vanityfair.com/photos/54cab789494254fc0996f14b/master/pass/image.jpg',
-    categories: [
-      'hotel',
-      'leisure',
-      'accomodation'
-    ],
     rating: 5, 
   }, 
   {
@@ -79,10 +62,6 @@ export default [
     district: 'Southwark',
     region: 'London',
     image: 'https://youimg1.tripcdn.com/target/100g1f000001gqxja8684_C_750_500.jpg?proc=source%2Ftrip',
-    categories: [
-      'garden',
-      'nature'
-    ],
     rating: 5, 
   }
 ]
