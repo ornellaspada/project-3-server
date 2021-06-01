@@ -4,14 +4,14 @@ import { NotFound } from '../lib/error.js'
 
 async function create(req, res, next) {
   req.body.user = req.currentUser
-  console.log('working!')
+
   try {
     const place = await PlaceModel.findById(req.params.placeId)
       .populate('user')
       .populate('reviews.user')
     console.log(place)
     if (!place) {
-      throw new NotFound('No pokemon found.')
+      throw new NotFound('No place found.')
     }
 
     place.reviews.push(req.body)
@@ -28,7 +28,7 @@ async function create(req, res, next) {
 
 async function update(req, res, next) {
   try {
-    // grab params for placeId and commentId
+    // ? grab params for placeId and commentId
     const { placeId, reviewId } = req.params
 
     // ? step 1 find place by placeId 
@@ -36,7 +36,7 @@ async function update(req, res, next) {
     console.log(place)
 
     if (!place) {
-      throw new NotFound('No Places Found.')
+      throw new NotFound('No place Found.')
     }
 
     // ? step 2 find the comment by its reviewId
