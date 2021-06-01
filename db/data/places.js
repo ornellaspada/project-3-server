@@ -102,7 +102,7 @@ export default [
     region: 'London',
     image: 'https://m.media-amazon.com/images/M/MV5BMTQ2NjY5MzE3OV5BMl5BanBnXkFtZTcwMjk5NTI3Nw@@._V1_SY1000_CR0,0,1499,1000_AL_.jpg',
     rating: '5',
-  }
+  },
   {
     name: 'Gagosian Gallery',
     description: 'Established by Larry Gagosian in Los Angeles in 1980, Gagosian is a global gallery specializing in modern and contemporary art that employs more than three hundred people at seventeen exhibition spaces across the United States, Europe, and Asia. In addition to its galleries, Gagosian is at the forefront of the digital marketplace with innovative online viewing rooms, timed to coincide with major art fairs, that include highly desirable works by today’s leading artists, transparent pricing, historical scholarship, and insightful market analysis.',
