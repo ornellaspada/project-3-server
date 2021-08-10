@@ -188,7 +188,7 @@ function Map() {
 
 - And add the buttons on the places' Show Page :
 
-<img src="pictures/Trippy_addfav.png" alt="addFav"/>
+<img src="pictures/Trippy_addFav.png" alt="addFav"/>
 <img src="pictures/Trippy_DeleteFav.png" alt="deleteFav"/>
 
 **The Add and Remove Logic in JavaScript**
