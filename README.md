@@ -1,4 +1,4 @@
-# ***Trippy - The website for alternative places in London***
+# Trippy - The app for alternative places in London
 
 ### Deployment
 
@@ -240,7 +240,7 @@ React.useEffect(() => {
  ## Wins ##
 
  - The stylish star-rating bar on the homepage and on the places' cards:
-<img src="pictures/HomeStar.png" alt="stars">
+<img src="pictures/Trippy_HomeStar.png" alt="stars">
  
 
  - Logic behind getting the places with five stars form api.js:
