@@ -1,5 +1,16 @@
 # Trippy - The app for alternative places in London
 
+A platform where users can browse on a map, review and add alternative places in London that are not the city landmarks.
+
+Users can also create a My Favourite list where they can add or delete their preferred hotspot in the
+
+### Authors
+
+- [Gursham Singh](https://github.com/Gursham2001)
+- [Paolo Zuccaro](https://github.com/pololo16)
+- Ornella Spada
+
+
 ### Deployment
 
 I deployed this website using Heroku for the backend and Netlify for the frontend and it's available [here](https://trippy-ornellaspada.netlify.app). Free servers on Heruku and Netlify sleep when they are not in use, please allow a minute or two for them to wake up.
@@ -76,6 +87,17 @@ The users can also create a My Favourite list where they can add or delete their
  - We helped each other to resolve any errors or bugs at the start of each day after our daily standup on Zoom.
 - We made all major decisions about site styling, colours, and Google Fonts together.
 - We worked together across the site to add error handling and error messages for the UI.
+
+ ### MVP
+
+We kept out MVP fairly simple with the option to add future features later on.
+Our main requirements were:
+
+- User authentication - Register & Login
+- An Index Page for all Places including a search function
+- A page showing all places on a map, with pins showing details on the hotspot
+- A single place view, with the option to edit and delete if the user has created the place
+- A review function, with the ability to delete the comment if the user has created the comment
 
  **Controllers for RESTful roots**
 
@@ -324,7 +346,7 @@ export default function secureRoute(req, res, next) {
 - Use external API in the form to search area by using postcode.
 
  ## Features to add ##
-- Users can edit their reviews.
+- Users can edit or cancel their reviews.
 - Limit the top-rated events to only display top three.
 - Nav bar hamburger menu for a mobile phone screen.
 - Auto-calculate and input the latitude and longitude when user creates a new venue.
